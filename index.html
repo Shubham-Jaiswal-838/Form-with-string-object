@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with string object</title>
+</head>
+<body style="background-color: orange; font-family: Georgia, 'Times New Roman', Times, serif;">
+  <h1>Enter your text in the given text area</h1>
+  <form action="" name="wordcount">
+    <textarea name="wordcount2" id="" cols="30" rows="10" wrap="virtual" style="color:pink; background-color: rgb(4, 4, 14); font-size: 20px;" ></textarea><br />
+    <input type="button" value="Calculate words" onclick="countit()" style="cursor: pointer;">
+    <input type="text" name="wordcount3" size="20" width="20px">
+    <input type="reset" value="Reset" style="cursor: pointer;">
+  </form>
+
+  <script type="text/javascript">
+  function countit() {
+    var formcontent=document.wordcount.wordcount2.value
+    formcontent=formcontent.split("")
+    document.wordcount.wordcount3.value=formcontent.length
+  }
+  </script>
+</body>
+</html>
